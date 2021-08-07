@@ -161,7 +161,9 @@ const toDolla = (amount) => {
 //
 // Return the percentage of the first argument divided by the second. For
 // example, given 1 and 4, then return '25.0%'.
-
+const percentage = (num, den) => {
+  return (den * 100) / num;
+}
 
 
 // Define a function named isStrictlyEqual that takes two arguments
@@ -176,7 +178,13 @@ const toDolla = (amount) => {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Strict_equality_using
 //
 // See https://dorey.github.io/JavaScript-Equality-Table/
-
+const isStrictlyEqual = (value1, value2) => {
+  if(value1 === value2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 // Define a function named isLooselyEqual that takes two arguments
@@ -189,7 +197,13 @@ const toDolla = (amount) => {
 //    Return false
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Loose_equality_using
-
+const isLooselyEqual = (value1, value2) => {
+  if(value1 == value2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 // Define a function named remainder that takes two arguments
