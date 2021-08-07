@@ -37,7 +37,7 @@ function sumAndProduct(x, y, z) {
 // Return the average of the three arguments. For example, given 2, 2, and 5,
 // then return 3.
 function averageMovieReview(rachel, roger, jake) {
-
+  return (rachel + roger + jake) / 3;
 }
 
 // Define a function named weightedAverageMovieReview that takes three arguments
@@ -52,7 +52,7 @@ function averageMovieReview(rachel, roger, jake) {
 //
 // For example, given 2, 2, and 5, with the above weights, then return 4.5
 function weightedAverageMovieReview(rachel, roger, jake) {
-
+  return (rachel * 0.25 + roger * 1 + jake * 2.2) / 3;
 }
 
 // Define a function named roundUp that takes one argument
@@ -62,7 +62,7 @@ function weightedAverageMovieReview(rachel, roger, jake) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
 function roundUp(decimal) {
-
+  return Math.ceil(decimal);
 }
 
 // Define a function named toFahrenheit that takes one argument
@@ -70,7 +70,9 @@ function roundUp(decimal) {
 //
 // Return the argument converted to Fahrenheit rounded to the nearest integer.
 // Use Google to find the formula.
+function toFahrenheit(number) {
 
+}
 
 
 // Define a function named areaOfCircle that takes one argument
