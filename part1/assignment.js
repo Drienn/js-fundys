@@ -235,7 +235,7 @@ const isEven = (number) => {
 //    Return true
 // Otherwise
 //    Return false
-function isOdd(n) {
+const isOdd = (n) => {
   if(Math.abs(n % 2) == 1){
     return true;
   } else {
@@ -314,7 +314,12 @@ function isOdd(n) {
 //
 // See: https://en.wikipedia.org/wiki/Leap_year#Algorithm
 
-
+const isLeapYear = (year) => {
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+      return true; 
+    }
+    return false; 
+  }
 
 
 
@@ -412,7 +417,13 @@ const leftPad5 = (word) => {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
-
+const superPicky = (value) => {
+  if (typeof value === 'string') {
+    return 'Thanks! Got it.';
+  } else {
+    return `I wanted a string, but all I got was a stinking ${typeof value}`
+  }
+}
 
 
 
