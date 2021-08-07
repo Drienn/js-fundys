@@ -13,7 +13,7 @@ function sum(a, b) {
 //
 // Return the product of these two arguments
 function product(a, b) {
-  // YOUR CODE HERE
+  return a*b;
 }
 
 // Define a function named sumAndProduct that takes three arguments
@@ -26,7 +26,7 @@ function product(a, b) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping
 function sumAndProduct(x, y, z) {
-
+  return (x + y) * z;
 }
 
 // Define a function named averageMovieReview that takes three arguments
