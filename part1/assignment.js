@@ -105,7 +105,9 @@ const areaOfRing = (outerRadius, innerRadius) => {
 // Return a string in the format 'Hello, Kelly Rippa!' using these arguments
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Template_strings
-const greet = () 
+const greet = (firstName, lastName) => {
+  return (`Hello, ${firstName} ${lastName}!`);
+} 
 
 
 // Define a function named toSentence that takes four arguments
@@ -122,7 +124,9 @@ const greet = ()
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators
-
+const toSentence = (word1, word2, word3, oxfordComma) => {
+    return `${word1}, ${word2}${oxfordComma ? ',' : ''} and ${word3}.`
+}
 
 
 // Define a function named toRoman that takes one argument
@@ -146,7 +150,9 @@ const greet = ()
 // 10, then return '$10.00'.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-
+const toDolla = (amount) => {
+  return `$${amount.toFixed(2)}`;
+}
 
 
 // Define a function named percentage that takes two arguments
