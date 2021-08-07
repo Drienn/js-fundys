@@ -71,7 +71,7 @@ function roundUp(decimal) {
 // Return the argument converted to Fahrenheit rounded to the nearest integer.
 // Use Google to find the formula.
 function toFahrenheit(number) {
-
+  return Math.ceil(number * (9/5)) + 32;
 }
 
 
@@ -82,7 +82,9 @@ function toFahrenheit(number) {
 // formula.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
-
+const areaOfCircle = (number) => {
+  return Math.PI * (number * number);
+}
 
 
 // Define a function named areaOfRing that takes two arguments
@@ -91,7 +93,9 @@ function toFahrenheit(number) {
 //
 // Return the area of a circular ring using these arguments. Use Google to find
 // the formula.
-
+const areaOfRing = (outerRadius, innerRadius) => {
+  return Math.PI * (outerRadius * outerRadius) - Math.PI * (innerRadius * innerRadius);
+}
 
 
 // Define a function named greet that takes 2 arguments
@@ -101,7 +105,7 @@ function toFahrenheit(number) {
 // Return a string in the format 'Hello, Kelly Rippa!' using these arguments
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Template_strings
-
+const greet = () 
 
 
 // Define a function named toSentence that takes four arguments
