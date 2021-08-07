@@ -4,7 +4,7 @@
 //
 // Return the sum of these two arguments
 function sum(a, b) {
-  // return a + b;
+  return a + b;
 }
 
 // Define a function named product that takes two arguments
