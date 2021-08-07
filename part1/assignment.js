@@ -13,7 +13,7 @@ function sum(a, b) {
 //
 // Return the product of these two arguments
 function product(a, b) {
-  return a*b;
+  return a * b;
 }
 
 // Define a function named sumAndProduct that takes three arguments
@@ -71,9 +71,8 @@ function roundUp(decimal) {
 // Return the argument converted to Fahrenheit rounded to the nearest integer.
 // Use Google to find the formula.
 function toFahrenheit(number) {
-  return Math.ceil(number * (9/5)) + 32;
+  return Math.ceil(number * (9 / 5)) + 32;
 }
-
 
 // Define a function named areaOfCircle that takes one argument
 //    radius (number)
@@ -84,8 +83,7 @@ function toFahrenheit(number) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
 const areaOfCircle = (number) => {
   return Math.PI * (number * number);
-}
-
+};
 
 // Define a function named areaOfRing that takes two arguments
 //    outerRadius (number)
@@ -94,9 +92,11 @@ const areaOfCircle = (number) => {
 // Return the area of a circular ring using these arguments. Use Google to find
 // the formula.
 const areaOfRing = (outerRadius, innerRadius) => {
-  return Math.PI * (outerRadius * outerRadius) - Math.PI * (innerRadius * innerRadius);
-}
-
+  return (
+    Math.PI * (outerRadius * outerRadius) -
+    Math.PI * (innerRadius * innerRadius)
+  );
+};
 
 // Define a function named greet that takes 2 arguments
 //    firstName (string)
@@ -106,9 +106,8 @@ const areaOfRing = (outerRadius, innerRadius) => {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Template_strings
 const greet = (firstName, lastName) => {
-  return (`Hello, ${firstName} ${lastName}!`);
-} 
-
+  return `Hello, ${firstName} ${lastName}!`;
+};
 
 // Define a function named toSentence that takes four arguments
 //    word1 (string)
@@ -125,9 +124,8 @@ const greet = (firstName, lastName) => {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators
 const toSentence = (word1, word2, word3, oxfordComma) => {
-    return `${word1}, ${word2}${oxfordComma ? ',' : ''} and ${word3}.`
-}
-
+  return `${word1}, ${word2}${oxfordComma ? "," : ""} and ${word3}.`;
+};
 
 // Define a function named toRoman that takes one argument
 //    arabic (number)
@@ -141,8 +139,6 @@ const toSentence = (word1, word2, word3, oxfordComma) => {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement
 
-
-
 // Define a function toDolla that takes one argument
 //    amount (number)
 //
@@ -152,8 +148,7 @@ const toSentence = (word1, word2, word3, oxfordComma) => {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 const toDolla = (amount) => {
   return `$${amount.toFixed(2)}`;
-}
-
+};
 
 // Define a function named percentage that takes two arguments
 //    numerator (number)
@@ -163,8 +158,7 @@ const toDolla = (amount) => {
 // example, given 1 and 4, then return '25.0%'.
 const percentage = (num, den) => {
   return (den * 100) / num;
-}
-
+};
 
 // Define a function named isStrictlyEqual that takes two arguments
 //    value1 (anything)
@@ -179,13 +173,12 @@ const percentage = (num, den) => {
 //
 // See https://dorey.github.io/JavaScript-Equality-Table/
 const isStrictlyEqual = (value1, value2) => {
-  if(value1 === value2) {
+  if (value1 === value2) {
     return true;
   } else {
     return false;
   }
-}
-
+};
 
 // Define a function named isLooselyEqual that takes two arguments
 //    value1 (anything)
@@ -198,13 +191,12 @@ const isStrictlyEqual = (value1, value2) => {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Loose_equality_using
 const isLooselyEqual = (value1, value2) => {
-  if(value1 == value2) {
+  if (value1 == value2) {
     return true;
   } else {
     return false;
   }
-}
-
+};
 
 // Define a function named remainder that takes two arguments
 //    numerator (number)
@@ -214,8 +206,9 @@ const isLooselyEqual = (value1, value2) => {
 // example, given 4 and 3, then return 1.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()
-
-
+const remainder = (num, den) => {
+  return num / den;
+};
 
 // Define a function named isEven that takes one argument
 //    integer (number)
@@ -227,7 +220,13 @@ const isLooselyEqual = (value1, value2) => {
 //
 // Hint: What number will give you a remainder of 0 if the argument is even?
 
-
+const isEven = (number) => {
+  if (number % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 // Define a function named isOdd that takes one argument
 //    integer (number)
@@ -236,6 +235,13 @@ const isLooselyEqual = (value1, value2) => {
 //    Return true
 // Otherwise
 //    Return false
+function isOdd(n) {
+  if(Math.abs(n % 2) == 1){
+    return true;
+  } else {
+    return false
+  };
+}
 
 
 
@@ -251,6 +257,7 @@ const isLooselyEqual = (value1, value2) => {
 
 
 
+
 // Define a function named largestOfThree which takes three arguments
 //    value1 (number)
 //    value2 (number)
@@ -259,6 +266,7 @@ const isLooselyEqual = (value1, value2) => {
 // Return the largest argument by value
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
 
 
 
@@ -272,6 +280,8 @@ const isLooselyEqual = (value1, value2) => {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+
+
 
 
 
@@ -291,6 +301,9 @@ const isLooselyEqual = (value1, value2) => {
 
 
 
+
+
+
 // Define a function named isLeapYear that takes one argument
 //    year (number)
 //
@@ -303,6 +316,8 @@ const isLooselyEqual = (value1, value2) => {
 
 
 
+
+
 // Define a function named shout that takes one argument
 //    message (string)
 //
@@ -310,6 +325,10 @@ const isLooselyEqual = (value1, value2) => {
 // 'Shut the front door', then return 'SHUT THE FRONT DOOR'
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+const shout = (message) => {
+  return message.toUpperCase(); 
+}
 
 
 
@@ -320,6 +339,10 @@ const isLooselyEqual = (value1, value2) => {
 // 'shhh... '. For exaple, given 'GOLF TIME', then return "shhh... golf time"
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+const whisper = (message) => {
+return `shhh... ${message.toLowerCase()}`; 
+}
 
 
 
@@ -340,6 +363,8 @@ const isLooselyEqual = (value1, value2) => {
 
 
 
+
+
 // Define a function named capitalize that takes one argument
 //    message (string)
 //
@@ -347,6 +372,10 @@ const isLooselyEqual = (value1, value2) => {
 // 'oh, you', then return 'Oh, you'.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
+
+const capitalize = (message) => {
+  return message.charAt(0).toUpperCase() + message.slice(1);
+}
 
 
 
@@ -357,6 +386,19 @@ const isLooselyEqual = (value1, value2) => {
 //    Return the argument but prefixed with spaces until it's 5 characters long
 // If the argument's length is 5 or more characters
 //    Return the argument
+const leftPad5 = (word) => {
+  if (word.length < 5){
+    let padding = 5 - word.length;
+    let space = '';
+    for (let i = 0; i < padding; i++){
+      space = space + ' ';
+    };
+    return `${space}${word}`
+  } else {
+    return `${word}`
+  }
+}
+
 
 
 
@@ -369,6 +411,9 @@ const isLooselyEqual = (value1, value2) => {
 //    Return 'I wanted a string, but all I got was a stinking TYPE'
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
+
+
 
 
 
