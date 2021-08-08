@@ -187,14 +187,8 @@ const distance = (point1, point2) => {
 // the latest object to have the key will determine the value. For example,
 // given {c: 3} and {c: 4}, then return {c: 4}.
 const combine = (obj1, obj2) => {
-  const obj = {}
-  for (let i = 0; i < obj.length; i++){
-    const { currentKey } = Object.keys(obj1[i]);
-    if(obj2.includes(currentKey)){
-      obj1.push(obj2[i][currentKey])
-    }
-  }
-  return obj1;
+  const obj = {...obj1, ...obj2}
+  return obj;
 }
 
 
@@ -204,7 +198,11 @@ const combine = (obj1, obj2) => {
 // Return a new object where the keys and values of the argument are inverted.
 // For example, given { a: 1, b: 2 }, then return { '1': 'a', '2': 'b' }.
 const invert = (obj) => {
-
+  return Object.entries(obj).reduce((restore, end) => {
+    const [key, value] = end;
+    restore[ value ] = key;
+    return restore;
+  }, {});
 }
 
 
