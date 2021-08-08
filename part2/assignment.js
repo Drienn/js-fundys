@@ -18,10 +18,9 @@ function sum(arr) {
 //
 // Return the product of all of the numbers in the array. For example, given
 // [1, 2, 3, 4], then return 24. If the array is empty, return 1.
-function product(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    product *= arr[i];
-  }
+const product = (arr) => {
+  let total = arr.reduce((a, b) => a * b, 1 )
+  return total;
 }
 
 // Define a function named concatenate that takes in one argument.
@@ -49,7 +48,9 @@ function repeat(str, times) {
 //
 // Return a new array with any grade less than 70 filtered out. For example,
 // given [88, 67, 70, 92, 53], then return [88, 70, 92].
-
+const filterPassingGrades = (grades) => {
+  return grades.filter(grade => grade >= 70);
+}
 
 
 
@@ -60,7 +61,9 @@ function repeat(str, times) {
 //
 // Return a new array of numbers where all from elements are replaced with to.
 // For example, given [1, 3, 2, 1, 3], 1, and 4, then return [4, 3, 2, 4, 3].
-
+const replace = (arr, from, to) => {
+  return arr.splice(from, to);
+}
 
 
 
@@ -73,7 +76,9 @@ function repeat(str, times) {
 // Tip: You only need to flatten one level deep.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-
+const flatten = (arr) => {
+  
+}
 
 
 
@@ -84,7 +89,9 @@ function repeat(str, times) {
 // then return 4. If the array is empty, return -Infinity.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-
+const max = (arr) => {
+  return Math.max(...arr);
+}
 
 
 
@@ -95,7 +102,9 @@ function repeat(str, times) {
 // then return -3. If the array is empty, return Infinity.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min
-
+const min = (arr) => {
+  return Math.min(...arr);
+}
 
 
 
@@ -104,8 +113,16 @@ function repeat(str, times) {
 //
 // Return the mean (i.e. average) of all of the numbers in the array. For
 // example, given [1, 2, 6], then return 3. If the array is empty, return null.
-
-
+const mean = (arr) => {
+  let sum = 0; 
+  if (!arr.length) {
+    return null; 
+  }
+ for (let i = 0; i < arr.length; i++) {
+   sum = sum + arr[i];
+ }
+ return sum / arr.length;
+}
 
 
 // Define a function named median that takes in one argument.
@@ -119,7 +136,9 @@ function repeat(str, times) {
 // Tip: The given array may not be sorted.
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-
+const median = (arr) => {
+  
+}
 
 
 
@@ -128,6 +147,9 @@ function repeat(str, times) {
 //     str (string)
 //
 // Return true if that string exists in the array, otherwise false.
+const contains = (arr, str) => {
+  return arr.includes(str);
+}
 
 
 
@@ -144,7 +166,9 @@ function repeat(str, times) {
 // approximately 7.810249675906654.
 //
 // Tip: Use Google to learn more about calculating the distance.
-
+const distance = (point1, point2) => {
+  
+}
 
 
 
@@ -157,7 +181,9 @@ function repeat(str, times) {
 // If there's a key in more than one object,
 // the latest object to have the key will determine the value. For example,
 // given {c: 3} and {c: 4}, then return {c: 4}.
-
+const combine = (obj1, obj2) => {
+  
+}
 
 
 // Define a function called invert that takes in one argument.
@@ -165,7 +191,9 @@ function repeat(str, times) {
 //
 // Return a new object where the keys and values of the argument are inverted.
 // For example, given { a: 1, b: 2 }, then return { '1': 'a', '2': 'b' }.
-
+const invert = (obj) => {
+  
+}
 
 
 
@@ -174,7 +202,9 @@ function repeat(str, times) {
 //
 // Return an array of the values of the object. For example, given
 // { a: 1, b: 2, c: 3 }, then return [1, 2, 3].
-
+const values = (obj) => {
+  
+}
 
 
 
@@ -184,7 +214,9 @@ function repeat(str, times) {
 // Return a new array where each element is key-value pair array of the
 // argument. For example, given { a: 1, b: 2 }, then return
 // [['a', 1], ['b', 2]].
+const toPairs = (obj) => {
 
+}
 
 
 
@@ -194,3 +226,9 @@ function repeat(str, times) {
 // Return a new object where each key-value pair is from an element in the
 // argument. For example, given [['a', 1], ['b', 2]], then return
 // { a: 1, b: 2 }.
+const fromPairs = (arr) => {
+
+}
+
+
+
