@@ -266,7 +266,9 @@ const isOdd = (n) => {
 // Return the largest argument by value
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
-
+const largestOfThree = (value1, value2, value3) => {
+  return Math.max(value1, value2, value3);
+}
 
 
 
@@ -280,9 +282,15 @@ const isOdd = (n) => {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-
-
-
+const longestOfThree = (value1, value2, value3) => {
+  if (value1.length > value2.length && value1.length > value3.length){
+    return value1;
+  } else if (value2.length > value1.length && value2.length > value3.length) {
+    return value2;
+  } else {
+    return value3;
+  }
+}
 
 
 // Define a function named iceCreamPosition that takes two arguments
@@ -298,7 +306,17 @@ const isOdd = (n) => {
 //      Return 'on the side'
 // Otherwise
 //    Return 'up to you'
-
+const iceCreamPosition = (pieTemp, flavor) => {
+  if (flavor == 'cardamom'){
+    return 'not at all';
+  } else if (pieTemp == 'cold'){
+    return 'on top';
+  } else if (pieTemp == 'warm'){
+    return 'on the side';
+  } else {
+    return 'up to you';
+  }
+}
 
 
 
@@ -365,7 +383,9 @@ return `shhh... ${message.toLowerCase()}`;
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-
+const stopAt = (source, stop) => {
+  
+}
 
 
 
