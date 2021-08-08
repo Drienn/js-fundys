@@ -254,8 +254,13 @@ const isOdd = (n) => {
 //    Return false
 //
 // Treat 'y' as a consonant.
-
-
+const isVowel = (letter) => {
+  if (('a, e, i, o, u'.includes(letter))){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 // Define a function named largestOfThree which takes three arguments
@@ -458,3 +463,25 @@ const superPicky = (value) => {
 //    Return a string that says 'Better call an accountant'
 // Otherwise
 //    Return the correct tax rate as a string using the table from http://www.efile.com/tax-service/tax-calculator/tax-brackets/
+
+const calculateTaxRate = (salary, status) => {
+  if (status != 'single' && status != 'joint'){
+    return 'Better call an accountant';
+  } else if (salary > 74900) {
+    return 'Better call an accountant';
+  } else if (status == 'single') {
+    if (salary < 9276) {
+      return '10%';
+    }
+    if (salary >= 9276) {
+      return '15%';
+    }
+  } else if (status == 'joint'){
+    if (salary < 18551) {
+      return '10%';
+    }
+    if (salary >= 18551)
+    return '15%';
+  }
+}
+
