@@ -213,7 +213,7 @@ const invert = (obj) => {
 // Return an array of the values of the object. For example, given
 // { a: 1, b: 2, c: 3 }, then return [1, 2, 3].
 const values = (obj) => {
-  
+  return Object.values(obj);
 }
 
 
@@ -225,7 +225,7 @@ const values = (obj) => {
 // argument. For example, given { a: 1, b: 2 }, then return
 // [['a', 1], ['b', 2]].
 const toPairs = (obj) => {
-
+  return Object.entries(obj);
 }
 
 
@@ -237,7 +237,11 @@ const toPairs = (obj) => {
 // argument. For example, given [['a', 1], ['b', 2]], then return
 // { a: 1, b: 2 }.
 const fromPairs = (arr) => {
-
+  return arr.reduce((restore, end) => {
+    const [key, value] = end;
+    restore[ key ] = value;
+    return restore;
+  }, {});
 }
 
 
